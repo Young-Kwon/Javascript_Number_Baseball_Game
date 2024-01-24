@@ -1,0 +1,150 @@
+/* Young Sang Kwon, 000847777, Assignment 4, Number Baseball Game */
+/* Header baseball animation*/
+#headerAni1 {
+    min-width:100px;
+    min-height:100px;
+    background-color: blue;
+    color: white;
+    animation: colorChange;
+    animation-duration: 2000ms;
+    animation-iteration-count: infinite;    
+    text-align: center;
+    padding-top: 25px;
+}
+
+/* Header title style */
+h1 {
+    color: white;
+    background-color: turquoise;
+    text-align: center;    
+    border-color: red;
+}
+
+/* User Name style */
+#userName {
+    background-color: beige;
+    padding-left: 5%;
+}
+
+/* User Name Error font color */
+#userError {
+    color: red;
+}
+
+/* game record align */
+.col {
+    text-align: center;
+}
+
+/* game field style */
+#gameField {
+    background-color: khaki;    
+    padding-left: 5%;
+}
+
+/* User Name input box style */
+#userNameInput input {
+    width: 300px;
+    height: 50px;
+    font-size: 30px;
+    text-align: center;
+}
+
+/* info box style */
+#description {
+    font-size: 80%;
+}
+
+/* Number input box style */
+#inputField input {
+    width: 45px;
+    height: 45px;
+    font-size: 30px;
+    text-align: center;
+}
+
+/* record field style */
+#inputField, #recordField{
+    padding: 5px;
+    text-align: center;
+}
+
+#recordField {
+    font-size: 30px;
+    text-align: left;
+}
+
+/* result field style */
+#result {
+    font-size: 20px;
+    padding-left: 10px;
+    color: red;
+}
+
+/* small size display */
+@media (max-width: 320px) {
+    #userNameInput input {
+        width: 150px;
+        height: 30px;
+        font-size: 20px;
+        text-align: center;
+    }
+    
+    #description {
+        font-size: 70%;
+    }
+    #inputField input {
+        width: 30px;
+        height: 30px;
+        font-size: 20px;
+        text-align: center;
+    }
+    #inputField, #recordField{
+        padding: 5px;
+        text-align: center;
+    }
+
+    #recordField {
+        font-size: 20px;
+        text-align: left;
+    }
+
+    #result {
+        font-size: 20px;
+        padding-left: 10px;
+        color: red;
+    }
+}
+
+/* button style */
+button {
+    margin-left: 10px;
+}
+
+/* imag animation */
+#ballImg {
+    animation-name: tremble;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+footer {
+    font-size: 70%;
+     background-color: khaki;
+    color: white;
+}
+
+/* Header color change */
+@keyframes colorChange {
+    25%  { background-color: darkblue; color: white;}
+    50%  { background-color: blue; color: white;}
+    75%  { background-color: skyblue; color: white;}
+    100% { background-color: blue; color: white;}
+}
+
+/* imag animation */
+@keyframes tremble {
+    0% {transform:rotate( 40deg); transform:rotateZ(40deg);}
+   50% {transform:rotate(-80deg); transform:rotateZ(-40deg);}
+  100% {transform:rotate( 40deg); transform:rotateZ(40deg);}
+}

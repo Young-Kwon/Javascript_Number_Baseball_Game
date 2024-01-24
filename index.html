@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!-- Young Sang Kwon, 000847777, Assignment 4, Number Baseball Game -->
+<html lang="en">
+    
+    <head>
+        <title>Number Baseball Game</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- CSS only -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+        <!-- JavaScript Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+        <!-- My CSS -->
+        <link href="index.css" rel="stylesheet">
+        <!-- My Javascript -->
+        <script src = "a4.js"></script>
+    </head>
+
+    <body>
+        <header>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/92/Baseball.svg" id = "ballImg" class="rounded float-start" alt="baseballImg" width ="100">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/92/Baseball.svg" id = "ballImg" class="rounded float-start" alt="baseballImg" width ="80">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/92/Baseball.svg" id = "ballImg" class="rounded float-start" alt="baseballImg" width ="60">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/92/Baseball.svg" id = "ballImg" class="rounded float-start" alt="baseballImg" width ="40">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/92/Baseball.svg" id = "ballImg" class="rounded float-start" alt="baseballImg" width ="20">
+            <h1 id = "headerAni1">Number Baseball Game</h1>
+        </header>
+
+        <main>
+            <!-- User Name input field -->
+            <div id= "userName">
+                <div id = "userNameInput">
+                    <h3>
+                        <input type="text" class="user" placeholder="User name" aria-label="User name">
+                        <button type="button" class="btn btn-primary" id = "startGame">Start Game</button>
+                    </h3>
+                </div>
+                <p id = "description"></p>
+                <p id = "userError">You can play game, after input User name</p>
+            </div>
+
+            <!-- Game field -->
+            <div id= "gameField">
+                <h2>Number Baseball Game</h2>
+                <p><button class="btn btn-danger" type="button" data-bs-toggle="collapse" data-bs-target="#helpText" aria-expanded="false" aria-controls="helpText">Click: Help</button></p>
+                <div class="collapse" id="helpText">
+                    <div class="card card-body">
+                        <p>It is a game of matching 3 numbers and positions.<br>
+                           1) Strike: If the number and position match<br>
+                           2) Ball: If the number is correct but the position is wrong<br>
+                           3) 3Out: If all 3 numbers are missing<br>
+                           You can choose 0 to 9 and repeated number is not permitted.<br>
+                           You have nine chances. Good luck.</p>
+                    </div>
+                </div>
+                
+                <!-- input Number -->
+                <div id = "inputField">
+                    <h3>Guess 3 digits:
+                        <input class = "input">
+                        <input class = "input">
+                        <input class = "input">
+                        <button type="button" class="badge rounded-pill text-bg-success" id = "submit">Submit</button>
+                    </h3>      
+                    <p id = "result"></p>
+                    <p id = "record">Win: 0, Lose: 0</p>
+                    <button type="button" class="btn btn-warning" id = "restart">Restart</button>
+
+                    <!-- recording of playing game -->
+                    <div id = "recordField">
+                        <div class="col" id="bso1"></div>
+                        <div class="col" id="bso2"></div>
+                        <div class="col" id="bso3"></div>
+                        <div class="col" id="bso4"></div>
+                        <div class="col" id="bso5"></div>
+                        <div class="col" id="bso6"></div>
+                        <div class="col" id="bso7"></div>
+                        <div class="col" id="bso8"></div>
+                        <div class="col" id="bso9"></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>©2022, Young Sang Kwon(000847777), Mohawk College</p>
+        </footer>    
+    </body>
+</html>
